@@ -1,0 +1,102 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(107deg, #10acbb, #dddf4e);
+  font-family: "Courier New", monospace;
+  font-size: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #EEE;
+}
+body h1 {
+  font-size: 9vh;
+  margin: 0;
+}
+body #status {
+  margin: 2vh 0;
+}
+body h1,
+body #status {
+  font-weight: bold;
+  text-shadow: 0.4vh 0.2vh 0.4vh #116c74;
+}
+body h1 .p1::after,
+body #status .p1::after {
+  content: "X";
+}
+body h1 .p2::after,
+body #status .p2::after {
+  content: "O";
+}
+body #output {
+  display: flex;
+  flex-direction: column;
+  width: 54vh;
+  max-width: 100%;
+  border-radius: 2vh;
+  box-shadow: 2vh 5vh 8vh -5vh rgba(26, 133, 143, 0.3) inset, -2vh 8vh 15vh -2vh rgba(26, 133, 143, 0.53);
+  overflow: hidden;
+  font-weight: bold;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(31, 129, 139, 0.5019607843), transparent);
+}
+body #output .row {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.2vh dotted #FFC107;
+}
+body #output .row:last-child {
+  border: none;
+}
+body #output .row .ceil {
+  width: 18vh;
+  height: 18vh;
+  font-size: 12vh;
+  border-left: 0.2vh dotted #FFC107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms ease-out;
+}
+body #output .row .ceil:first-child {
+  border: none;
+}
+body #output .row .ceil:hover {
+  filter: hue-rotate(-40deg);
+  font-size: 15vh;
+}
+body #output .row .ceil[data-value="1"]::after {
+  content: "X";
+  color: #c5fffc;
+  text-shadow: 0.1vh 0.1vh 0.2vh #333, 0 0 6vh #ffff8c;
+}
+body #output .row .ceil[data-value="2"]::after {
+  content: "O";
+  color: #c53c3c;
+  text-shadow: 0.4vh 0.4vh 0.2vh #570606;
+}
+body #new-game {
+  border: none;
+  border-radius: 3vh;
+  font-family: "Courier New", monospace;
+  font-size: 3vh;
+  font-weight: bold;
+  margin: 3vh 0;
+  padding: 1vh 2.5vh;
+  color: #FFF;
+  background: linear-gradient(63deg, rgb(60, 178, 183), #2de397);
+  box-shadow: 0 0 2vh rgba(26, 133, 143, 0.3) inset, 0.5vh 0.8vh 2vh -0.4vh rgba(26, 134, 143, 0.53);
+  text-shadow: -0.2vh 0.2vh 0.4vh rgba(51, 51, 51, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+}
+body #new-game:hover {
+  scale: 1.2;
+}/*# sourceMappingURL=style.css.map */
